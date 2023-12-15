@@ -1,0 +1,10 @@
+<div>
+    <ul>
+        @for (licence of licenceList; track licence.name) {
+            @if (licence.capacity>5){
+                <li>{{licence.name}} - {{licence.users}}/{{licence.capacity}}</li>
+            }
+        }
+      </ul>
+</div>
+
