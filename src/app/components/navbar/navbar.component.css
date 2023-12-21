@@ -1,8 +1,7 @@
-nav { 
+mat-toolbar { 
     background-color: #5e87ff;
-    text-align-last: left;
     color:white;
-    font-weight: bold;
-    margin: auto;
-    padding: 16px;
+    padding: 10px;
+    border: solid 1px #5e87ff;
+    box-shadow: 0px 2px 4px #304481;
 }

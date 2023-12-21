@@ -1,26 +1,30 @@
-import { Component, Injectable, Injector } from '@angular/core';
+import { Component } from '@angular/core';
 import { LicenceService } from '../../services/licence.service';
-import { ILicence } from '../../domains/licence.domain';
+import { UsersActiveComponent } from '../users-active/users-active.component';
+import { MatDialog } from '@angular/material/dialog';
+import { LoadingComponent } from '../loading/loading.component';
 
 @Component({
   selector: 'app-licences-list',
   standalone: true,
-  imports: [],
+  imports: [UsersActiveComponent, LoadingComponent],
   templateUrl: './licences-list.component.html',
   styleUrl: './licences-list.component.css',
   providers: [LicenceService]
 })
 export class LicencesListComponent {
 
-  licenceList: any;
- // private licenceList: ILicence[];
+  licenceName!: string;
 
-  constructor(private service: LicenceService){ 
+  licenceList: any;
+
+  loading = true
+
+  constructor(private service: LicenceService, public dialog: MatDialog){ 
 
   }
 
   ngOnInit(): void {
-   
     this.loadLicences();
   }
 
@@ -28,8 +32,23 @@ export class LicencesListComponent {
     await this.service.getLicences().subscribe((data) =>{
       console.log(data)
       this.licenceList = data 
+      this.loading = false;
     })
   }
 
+  handleLicenseData(e: Event): string {
+    let value: string = (e.target as HTMLInputElement).value;
+    this.licenceName = value;
+      console.log(this.licenceName + ' handleLicenseData()')
+    return value;
+  }
+
+  openDialog(e: Event): void{
+    this.handleLicenseData(e);
+    this.dialog.open(UsersActiveComponent,{
+      data: {licenceName: this.licenceName}
+    });
+
+  }
 
 }

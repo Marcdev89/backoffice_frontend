@@ -1,10 +1,35 @@
-<div>
-    <ul>
+
+@if (loading) {
+    <app-loading/>
+}@else {
+    <div class="container">
+
+
+<table mat-table class="mat-elevation-z8">
+    <tr>
+        <th mat-header-cell > Licence </th>
+        <th mat-header-cell > online/total</th>
+        <th mat-header-cell > Actions </th>
+    </tr>
+    
         @for (licence of licenceList; track licence.name) {
             @if (licence.capacity>5){
-                <li>{{licence.name}} - {{licence.users}}/{{licence.capacity}}</li>
+                <tr mat-row >                   
+                        <td> {{licence.name}} </td>                    
+                        <td> {{licence.users}}/{{licence.capacity}} </td>                  
+                        <td> <button value={{licence.name}} mat-button (click)="openDialog($event)">Open this</button> </td>
+                </tr>
+                
+            
             }
         }
-      </ul>
+    
+</table>
 </div>
+
+    
+}
+
+
+
 

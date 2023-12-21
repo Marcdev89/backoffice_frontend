@@ -1,0 +1,6 @@
+mat-spinner {
+    background-color: transparent;
+    position: absolute;
+    margin: auto;
+    z-index: 3;
+}
