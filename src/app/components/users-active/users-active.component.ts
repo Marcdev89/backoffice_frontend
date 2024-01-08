@@ -5,12 +5,13 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { LicencesListComponent } from './../licences-list/licences-list.component'
 import { IDialogData } from '../../domains/user.domain';
 import { LoadingComponent } from '../loading/loading.component';
+import { NoUsersComponent } from '../no-users/no-users.component';
 
 
 @Component({
   selector: 'app-users-active',
   standalone: true,
-  imports: [MatDividerModule, LicencesListComponent, LoadingComponent],
+  imports: [MatDividerModule, LicencesListComponent, LoadingComponent, NoUsersComponent],
   templateUrl: './users-active.component.html',
   styleUrl: './users-active.component.css',
   providers: [UserService]

@@ -3,11 +3,12 @@ import { LicenceService } from '../../services/licence.service';
 import { UsersActiveComponent } from '../users-active/users-active.component';
 import { MatDialog } from '@angular/material/dialog';
 import { LoadingComponent } from '../loading/loading.component';
+import { MatButton, MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-licences-list',
   standalone: true,
-  imports: [UsersActiveComponent, LoadingComponent],
+  imports: [UsersActiveComponent, LoadingComponent,MatButtonModule],
   templateUrl: './licences-list.component.html',
   styleUrl: './licences-list.component.css',
   providers: [LicenceService]

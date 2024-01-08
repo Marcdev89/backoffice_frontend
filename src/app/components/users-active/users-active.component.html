@@ -1,8 +1,7 @@
 @if (loading) {
     <app-loading></app-loading>
 }@else if (usersList.length>0) {
-    <table mat-table class="mat-elevation-z8">
-        
+    <table mat-table class="mat-elevation-z8">  
         <tr>
             <th mat-header-cell > Name </th>
             <th mat-header-cell > Code </th>
@@ -10,30 +9,16 @@
             <th mat-header-cell > licence </th>
         </tr>
         <mat-divider></mat-divider>
-        
-            @for (user of usersList; track user.id) {
-                                  
+            @for (user of usersList; track user.id) {                       
                         <tr>
                             <td mat-cell > {{user.name}} </td>
                             <td mat-cell > {{user.code}} </td>
                             <td mat-cell > {{user.date}} </td>
                             <td mat-cell > {{user.license}} </td>
-                        </tr>       
-                    
-                    <mat-divider></mat-divider>    
+                        </tr>                         
+        <mat-divider></mat-divider>    
            }  
-            <!-- @empty {
-            <p>Oops! Sorry. There are no users to show! EMPTY</p>
-           }     -->
-         
-        
     </table>  
 }@else {
-    <p>Oops! Sorry. There are no users to show!</p>
+    <app-no-users></app-no-users>
 }
-
-
-
-
-
-
