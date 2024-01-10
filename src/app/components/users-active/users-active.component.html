@@ -1,4 +1,4 @@
-@if (loading) {
+<!-- @if (loading) {
     <app-loading></app-loading>
 }@else if (usersList.length>0) {
     <table mat-table class="mat-elevation-z8">  
@@ -19,6 +19,34 @@
         <mat-divider></mat-divider>    
            }  
     </table>  
+}@else {
+    <app-no-users></app-no-users>
+} -->
+@if (loading) {
+    <app-loading></app-loading>
+}@else if (usersList.length>0) {
+    <table class="table table-sm"> 
+        <thead >
+            <tr  >
+                <th scope="col" class="thead-color" > Name </th>
+                <th scope="col" class="thead-color" > Code </th>
+                <th scope="col" class="thead-color" > <i class="bi bi-clock-history"></i>  Start connection: </th>
+            </tr>
+        </thead> 
+        <tbody>
+            @for (user of usersList; track user.id) {                       
+                        <tr scope="row">
+                            <td> {{user.name}} </td>
+                            <td> {{user.code}} </td>
+                            <td> {{user.date}} </td>
+                        </tr>                         
+        
+           }  
+        </tbody>
+         </table>
+         <div class="text-center under-table"> 
+            <button (click)="closeDialog()" type="button" class="btn-close" aria-label="Close"></button>
+        </div>  
 }@else {
     <app-no-users></app-no-users>
 }

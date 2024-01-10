@@ -1,4 +1,4 @@
-@if (loading) {
+<!-- @if (loading) {
     <app-loading/>
 }@else {
     <div class="container">
@@ -13,10 +13,38 @@
                     <tr mat-row >                   
                             <td> {{licence.name}} </td>                    
                             <td> {{licence.users}}/{{licence.capacity}} </td>                  
-                            <td> <button value={{licence.name}} color="primary"  (click)="openDialog($event)">Open this</button> </td>
+                            <td> <button class="btn btn-primary" value={{licence.name}} color="primary"  (click)="openDialog($event)"><i class="bi bi-people-fill"></i> users</button> </td>
                     </tr>
                 }
             }
     </table>
     </div>
+} -->
+
+@if (loading) {
+    <app-loading/>
+}@else {
+    <div id="licenceList" class="table-responsive">
+    <table  class="table table-sm">
+        <thead>
+            <tr>
+              <th scope="col">Licence's Name</th>
+              <th scope="col">Usage</th>
+              <th scope="col" ></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (licence of licenceList; track licence.name) {
+                @if (licence.capacity>5){
+                    <tr scope="row" >                   
+                            <td> {{licence.name}} </td>                    
+                            <td > {{licence.users}}/{{licence.capacity}} </td>                  
+                            <td> <button class="btn btn-outline-info btn-users btn-sm" color="primary" (click)="openDialog(licence.name)"><i class="bi bi-people-fill"></i> users</button> </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+    </div>
 }
+

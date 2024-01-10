@@ -1,0 +1,10 @@
+thead th, td{
+    padding: 18px;
+}
+.thead-color{
+    color: #5e87ff;
+    border-color: #5e87ff;
+}
+.under-table{
+    margin-bottom: 16px;
+}

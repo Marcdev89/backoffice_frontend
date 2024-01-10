@@ -14,7 +14,7 @@ export class LicenceService{
         private _http: HttpClient,
     ){}
 
-    getLicences() : Observable<ILicence>{
-        return this._http.get<ILicence>(environment.licence);
+    getLicences() : Observable<ILicence[]>{
+        return this._http.get<ILicence[]>(environment.licence);
     }
 }

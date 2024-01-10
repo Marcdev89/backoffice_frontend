@@ -1,5 +1,25 @@
-table{
-    position: absolute;
-    margin: auto;
-    z-index: 1;
+.btn-users{
+    color: #5e87ff;
+    border-color: #5e87ff;
 }
+.btn-users:hover{
+    background-color: #dde6fd81;
+}
+#licenceList{
+    position: relative;
+    z-index: 1;
+    margin: 25%;
+    margin-top: 68px;
+    margin-bottom: 68px;
+    border-width: 1px;
+    border-radius: 1%;
+    box-shadow: 0px 2px 4px #32458044;
+}
+thead th {
+    background-color: #5e87ff;
+    color: #fff;
+  }
+
+  thead th, td{
+    padding: 2%;
+  }

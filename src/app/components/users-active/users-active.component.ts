@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import {MatDividerModule} from '@angular/material/divider';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { LicencesListComponent } from './../licences-list/licences-list.component'
 import { IDialogData } from '../../domains/user.domain';
 import { LoadingComponent } from '../loading/loading.component';
@@ -21,7 +21,7 @@ export class UsersActiveComponent {
   license!: string;
   loading = true
   
-  constructor(private service: UserService, public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: IDialogData){
+  constructor(private service: UserService, public dialog: MatDialog, @Inject(MAT_DIALOG_DATA) public data: IDialogData,public dialogRef: MatDialogRef<UsersActiveComponent>){
   }
 
   ngOnInit(): void { 
@@ -36,6 +36,10 @@ export class UsersActiveComponent {
 
     })
   }
+  
+    closeDialog(): void{
+      this.dialogRef.close()
+    }
 
 
 }

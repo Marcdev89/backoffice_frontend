@@ -1,9 +1,14 @@
-<div>
-    <p>There are not users online</p>
-</div>
-<div> 
-    <p>You are free to use this licence</p>
-</div>
-<div>
-    <i class="material-icons">thumb_up</i>
-</div>
+<div class="card text-center">
+    <div class="card-header bg-success">
+        No users currently online! 
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">
+        <i class="bi bi-check2-circle"></i>
+      </h2>
+      <div class="card-body">You are <b>free</b> to use this licence</div>
+    </div>
+    <div class="card-footer">
+        <button (click)="closeDialog()" type="button" class="btn-close" aria-label="Close"></button>
+    </div>
+  </div>
