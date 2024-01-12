@@ -12,3 +12,21 @@ body { margin: 0; }
     border-radius: 50%;
     background-color: rgb(243, 240, 240);
 }
+
+.btn-idneo {
+    background-color: #5e87ff; 
+}
+
+.btn-idneo:hover{
+   background-color: #4665c0; 
+}
+
+.btn-icon{
+    width: 1em;
+    padding-bottom: 3px;
+}
+#google_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

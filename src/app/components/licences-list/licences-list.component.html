@@ -1,26 +1,3 @@
-<!-- @if (loading) {
-    <app-loading/>
-}@else {
-    <div class="container">
-    <table mat-table class="mat-elevation-z8">
-        <tr>
-            <th mat-header-cell > Licence </th>
-            <th mat-header-cell > online/total</th>
-            <th mat-header-cell > Actions </th>
-        </tr>  
-            @for (licence of licenceList; track licence.name) {
-                @if (licence.capacity>5){
-                    <tr mat-row >                   
-                            <td> {{licence.name}} </td>                    
-                            <td> {{licence.users}}/{{licence.capacity}} </td>                  
-                            <td> <button class="btn btn-primary" value={{licence.name}} color="primary"  (click)="openDialog($event)"><i class="bi bi-people-fill"></i> users</button> </td>
-                    </tr>
-                }
-            }
-    </table>
-    </div>
-} -->
-
 @if (loading) {
     <app-loading/>
 }@else {

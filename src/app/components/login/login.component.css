@@ -1,0 +1,23 @@
+.card{
+width: 36%;
+border-style: none;
+}  
+
+.login {
+    padding: 100px;
+}
+.welcome-text{
+width: 100%;
+font-size: 2rem;
+}
+
+
+/* .bi {
+    background-color: white;
+    border-radius: 15%;
+    color: #5e87ff;
+    padding: 1px;
+    padding-top: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+} */

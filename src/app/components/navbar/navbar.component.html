@@ -3,14 +3,15 @@
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
           <mat-icon>menu</mat-icon>
         </button>
-        <img src="/logo_idneo.png" alt="">
-        <span>Licence Usage</span>
+          <a href="">
+            <img class="favicon" src="favicon.png" alt="">
+          </a>
+        
+       <!--<span>Licence Usage</span> --> 
         <span class="example-spacer"></span>
-        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-          <mat-icon>favorite</mat-icon>
-        </button>
-        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-          <mat-icon>share</mat-icon>
-        </button>
+     @if (isLogged) {
+      <button class="btn btn-primary" (click)="logOut()">Log out</button>
+     }
+   
       </mat-toolbar>
 </nav>
