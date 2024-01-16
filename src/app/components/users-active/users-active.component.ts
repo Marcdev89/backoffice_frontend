@@ -33,13 +33,9 @@ export class UsersActiveComponent {
       this.usersList = data 
       this.license = this.data.licenceName;
       this.loading = false;
-
     })
   }
   
     closeDialog(): void{
       this.dialogRef.close()
-    }
-
-
-}
+    }}

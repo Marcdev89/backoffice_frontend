@@ -3,6 +3,5 @@ export interface ILicence {
     capacity: number;
     family: string;
     date: Date;
-    users: number;
-    
+    users: number; 
 }

@@ -1,27 +1,3 @@
-<!-- @if (loading) {
-    <app-loading></app-loading>
-}@else if (usersList.length>0) {
-    <table mat-table class="mat-elevation-z8">  
-        <tr>
-            <th mat-header-cell > Name </th>
-            <th mat-header-cell > Code </th>
-            <th mat-header-cell > Start connection: </th>
-            <th mat-header-cell > licence </th>
-        </tr>
-        <mat-divider></mat-divider>
-            @for (user of usersList; track user.id) {                       
-                        <tr>
-                            <td mat-cell > {{user.name}} </td>
-                            <td mat-cell > {{user.code}} </td>
-                            <td mat-cell > {{user.date}} </td>
-                            <td mat-cell > {{user.license}} </td>
-                        </tr>                         
-        <mat-divider></mat-divider>    
-           }  
-    </table>  
-}@else {
-    <app-no-users></app-no-users>
-} -->
 @if (loading) {
     <app-loading></app-loading>
 }@else if (usersList.length>0) {
@@ -39,8 +15,7 @@
                             <td> {{user.name}} </td>
                             <td> {{user.code}} </td>
                             <td> {{user.date}} </td>
-                        </tr>                         
-        
+                        </tr>                            
            }  
         </tbody>
          </table>

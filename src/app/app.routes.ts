@@ -8,13 +8,13 @@ import { loginGuard } from './guards/login.guard';
 export const routes: Routes = [
  
     {
-        path:'licences', component: LicencesListComponent, canActivate: [loginGuard] //[homeGuard]
+        path:'licences', component: LicencesListComponent, canActivate: [loginGuard] 
     },
     {
         path:'', redirectTo:'licences', pathMatch:'full'
     },
     {
-        path:'login', component: LoginComponent, canActivate: [homeGuard]//[loginGuard]
+        path:'login', component: LoginComponent, canActivate: [homeGuard]
     },
     {
         path:'**', component: PageNotFoundComponent

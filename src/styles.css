@@ -1,12 +1,14 @@
 html, body { height: 100%; }
+
 body { margin: 0; }
+
 .container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 48vh;
-  
 }
+
 .btn-close{
     padding: 10px;
     border-radius: 50%;
@@ -25,6 +27,7 @@ body { margin: 0; }
     width: 1em;
     padding-bottom: 3px;
 }
+
 #google_btn {
     display: flex;
     justify-content: center;

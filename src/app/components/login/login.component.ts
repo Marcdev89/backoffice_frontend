@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit{
       client_id: environment.client_id,
       callback: (response: any)=>{
         this.tokenService.setToken(response.credential)
-        //this.router.navigate(['/'])
         window.location.href='/licences'
       }
     });
@@ -36,5 +35,4 @@ export class LoginComponent implements OnInit{
     const parent = document.getElementById('google_btn');
     google.accounts.id.renderButton(parent, {theme: "outline"});
   }
-
 }

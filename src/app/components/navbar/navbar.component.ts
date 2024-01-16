@@ -27,7 +27,4 @@ public logOut(): void {
   this.tokenService.logOut();
   this.router.navigate(['/login'])
   this.isLogged=false;
-}
-
-
-}
+}}
